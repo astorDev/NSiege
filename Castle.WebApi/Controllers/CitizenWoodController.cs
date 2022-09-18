@@ -7,8 +7,8 @@ public class CitizenWoodController {
         await Task.Delay(modification.Burn + modification.Craft);
         var wood = Items.GetOrAdd(citizenId, (c) => new Wood(0));
         if (modification.Burn > wood.Amount) throw new InvalidOperationException("Not enough wood");
-        var resutlWood = new Wood(wood.Amount - modification.Burn + modification.Craft);
-        Items[citizenId] = resutlWood;
-        return resutlWood;
+        var resultWood = new Wood(wood.Amount - modification.Burn + modification.Craft);
+        Items[citizenId] = resultWood;
+        return resultWood;
     }
 }
