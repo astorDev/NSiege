@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NBomber" Version="3.1.0" />
+    <PackageReference Include="NBomber.Http" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="NBomber" />
+    <Using Include="NBomber.Contracts" />
+    <Using Include="NBomber.CSharp" />
+    <Using Include="NBomber.Plugins.Http.CSharp" />
+    <Using Include="NBomber.Plugins.Network.Ping" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Castle.Protocol\Castle.Protocol.csproj" />
+  </ItemGroup>
+
+</Project>
